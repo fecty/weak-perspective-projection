@@ -30,12 +30,13 @@ build-test: ${BIN_DIR}/${SOURCE}.out ${BIN_DIR}
 
 
 WEB_DIR := ${BIN_DIR}/web
+WEB_NAME:= web
 
 setup_env: 
 	bash --login
 
 build-web: ${WEB_DIR}
-	emcc -o ${WEB_DIR}/triangle.html ${SRC_DIR}/${SOURCE}.cpp ${OTHER_SOURCES} -Wall -std=c++17 -D_DEFAULT_SOURCE -Wno-missing-braces -Wunused-result -Os -I. -I raylib/src -I raylib/src/external -L. -L raylib/src -s USE_GLFW=3 -s ASYNCIFY -s TOTAL_MEMORY=67108864 -s FORCE_FILESYSTEM=1 --shell-file raylib/src/shell.html lib/web/libraylib.web.a -DPLATFORM_WEB -s 'EXPORTED_FUNCTIONS=["_free","_malloc","_main"]' -s EXPORTED_RUNTIME_METHODS=ccall
+	emcc -o ${WEB_DIR}/${WEB_NAME}.html ${SRC_DIR}/${SOURCE}.cpp ${OTHER_SOURCES} -Wall -std=c++17 -D_DEFAULT_SOURCE -Wno-missing-braces -Wunused-result -Os -I. -I raylib/src -I raylib/src/external -L. -L raylib/src -s USE_GLFW=3 -s ASYNCIFY -s TOTAL_MEMORY=67108864 -s FORCE_FILESYSTEM=1 --shell-file raylib/src/shell.html lib/web/libraylib.web.a -DPLATFORM_WEB -s 'EXPORTED_FUNCTIONS=["_free","_malloc","_main"]' -s EXPORTED_RUNTIME_METHODS=ccall
 
 run-web:
 	python3 -m http.server
