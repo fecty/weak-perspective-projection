@@ -17,7 +17,7 @@
 #define MIN_WIDTH 360
 #define MIN_HEIGHT 240
 
-#define IS_EVENTS_FOCUSED_ONLY true
+#define IS_EVENTS_FOCUSED_ONLY false
 
 float angleAlpha = 0;
 float angleBeta = 0;
