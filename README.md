@@ -1,5 +1,7 @@
 # Weak Perspective Projection
 
+![3d-cube](media/3d-cube.png)
+
 ## Project Overview
 
 This project implements **weak perspective projection**, a computer graphics technique used for 3D to 2D transformation. It leverages the raylib graphics library to visualize and demonstrate weak perspective projection concepts.
@@ -25,6 +27,7 @@ weak-perspective-projection/
 ├── bin/                   # Compiled executables
 ├── src/                   # Project source code
 │   └── main.cpp           # Main application entry point
+├── media/                 # Project relevant media
 ├── Makefile               # Build configuration
 ├── README.md              # This file
 └── LICENSE                # Project license
