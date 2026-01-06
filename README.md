@@ -29,6 +29,7 @@ weak-perspective-projection/
 ├── src/                   # Project source code
 │   └── main.cpp           # Main application entry point
 ├── media/                 # Project relevant media
+├── utility/               # Project relevant utility functions
 ├── Makefile               # Build configuration
 ├── README.md              # This file
 └── LICENSE                # Project license

@@ -37,7 +37,7 @@ Color fgColor = {static_cast<unsigned char>(255 - bgColor.r),
                  255}; // Opposite of background color
 
 using namespace std;
-void draw(float dt, vector<Vector3> nodes, vector<vector<int>> edges);
+void draw(float dt);
 void handleEvents();
 void handleWindowResize();
 Vector2 screen(Vector2 pos);
@@ -75,27 +75,6 @@ int main()
 
     cout << "width: " << w << "\theight: " << h << "\n";
 
-    // float s = 1;
-    // vector<Vector3> nodes = {
-    //     {-s, s, s},
-    //     {s, s, s},
-    //     {s, -s, s},
-    //     {-s, -s, s},
-
-    //     {-s, s, -s},
-    //     {s, s, -s},
-    //     {s, -s, -s},
-    //     {-s, -s, -s},
-    // };
-
-    // vector<vector<int>> edges = {
-    //     {0, 1, 2, 3},
-    //     {4, 5, 6, 7},
-    //     {0, 4},
-    //     {1, 5},
-    //     {2, 6},
-    //     {3, 7}};
-
     while (!WindowShouldClose())
     {
 
@@ -114,7 +93,7 @@ int main()
         else
             handleEvents();
 
-        draw(dt, nodes, edges);
+        draw(dt);
         // point(screen(project({.5, .5, .5})));
 
         // end
@@ -123,7 +102,7 @@ int main()
     return 0;
 }
 
-void draw([[maybe_unused]] float dt, vector<Vector3> nodes, vector<vector<int>> edges)
+void draw([[maybe_unused]] float dt)
 {
 
     // draw edges
@@ -194,7 +173,7 @@ Vector2 screen(Vector2 pos)
 
 void point(Vector2 pos)
 {
-    float s = 10;
+    float s = 2;
     DrawRectangle(static_cast<int>(pos.x - float(s / 2.f)),
                   static_cast<int>(pos.y - float(s / 2.f)),
                   int(s),
