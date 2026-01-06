@@ -9,7 +9,7 @@ CC_OTHER_FLAGS := -Wall -Wextra -Wpedantic -Wshadow -Wconversion -Wsign-conversi
 BIN_DIR := bin
 SRC_DIR := src
 SOURCE := main
-OTHER_SOURCES := 
+OTHER_SOURCES := ${SRC_DIR}/shape.cpp
 
 all: clear build-test
 

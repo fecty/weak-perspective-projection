@@ -3,6 +3,7 @@
 #include <raylib.h>
 #include <raymath.h>
 #include <vector>
+#include "shape.hpp"
 
 #define IS_FULLSCREEN true
 #define IS_WINDOWED false
@@ -74,26 +75,26 @@ int main()
 
     cout << "width: " << w << "\theight: " << h << "\n";
 
-    float s = 1;
-    vector<Vector3> nodes = {
-        {-s, s, s},
-        {s, s, s},
-        {s, -s, s},
-        {-s, -s, s},
+    // float s = 1;
+    // vector<Vector3> nodes = {
+    //     {-s, s, s},
+    //     {s, s, s},
+    //     {s, -s, s},
+    //     {-s, -s, s},
 
-        {-s, s, -s},
-        {s, s, -s},
-        {s, -s, -s},
-        {-s, -s, -s},
-    };
+    //     {-s, s, -s},
+    //     {s, s, -s},
+    //     {s, -s, -s},
+    //     {-s, -s, -s},
+    // };
 
-    vector<vector<int>> edges = {
-        {0, 1, 2, 3},
-        {4, 5, 6, 7},
-        {0, 4},
-        {1, 5},
-        {2, 6},
-        {3, 7}};
+    // vector<vector<int>> edges = {
+    //     {0, 1, 2, 3},
+    //     {4, 5, 6, 7},
+    //     {0, 4},
+    //     {1, 5},
+    //     {2, 6},
+    //     {3, 7}};
 
     while (!WindowShouldClose())
     {

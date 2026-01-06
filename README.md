@@ -1,7 +1,7 @@
 # Weak Perspective Projection
 
-**Try this project here: [https://fecty.github.io/weak-perspective-projection/bin/web/web.html](https://fecty.github.io/weak-perspective-projection/bin/web/web.html)**
 ![3d-cube](media/3d-cube.png)
+**Try this project here: [https://fecty.github.io/weak-perspective-projection/bin/web/web.html](https://fecty.github.io/weak-perspective-projection/bin/web/web.html)**
 
 ## Project Overview
 
