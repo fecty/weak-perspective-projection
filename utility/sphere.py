@@ -82,7 +82,7 @@ def sphere(size=1, N=20, digits=4):
 
 
 def main():
-    sphere(N=40, size=2)
+    sphere(N=20, size=2)
 
 
 if __name__ == "__main__":

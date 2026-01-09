@@ -105,12 +105,6 @@ int main()
 void draw([[maybe_unused]] float dt)
 {
 
-    // draw edges
-    for (Vector3 &node : nodes)
-    {
-        point(screen(project(translateZ(RotateXY(node, angleAlpha, angleBeta), dz))));
-    }
-
     // draw vertices
     for (auto edge : edges)
     {
@@ -124,6 +118,11 @@ void draw([[maybe_unused]] float dt)
 
             DrawLineEx(start, end, lineThickness, GREEN);
         }
+    }
+    // draw edges
+    for (Vector3 &node : nodes)
+    {
+        point(screen(project(translateZ(RotateXY(node, angleAlpha, angleBeta), dz))));
     }
 }
 
@@ -173,12 +172,15 @@ Vector2 screen(Vector2 pos)
 
 void point(Vector2 pos)
 {
+    // float s = 25 / dz;
+    // s = Clamp(s, 1, 2);
     float s = 2;
-    DrawRectangle(static_cast<int>(pos.x - float(s / 2.f)),
-                  static_cast<int>(pos.y - float(s / 2.f)),
-                  int(s),
-                  int(s),
-                  GREEN);
+    // DrawRectangle(static_cast<int>(pos.x - float(s / 2.f)),
+    //               static_cast<int>(pos.x - float(s / 2.f)),
+    //               int(s),
+    //               int(s),
+    //               RED);
+    DrawCircle(static_cast<int>(pos.x), static_cast<int>(pos.y), s, WHITE);
 }
 
 Vector2 project(Vector3 pos3d)
