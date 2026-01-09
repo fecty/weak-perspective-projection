@@ -10,7 +10,7 @@
 #define IS_RESIZABLE true
 #define LOG_INFO true
 
-#define SCREEN_TITLE "Project: 3d Rotating Cube"
+#define SCREEN_TITLE "Project: Weak Perspective Projection"
 #define SCREEN_WIDTH 1200
 #define SCREEN_HEIGHT 800
 #define SCREEN_FPS 60
